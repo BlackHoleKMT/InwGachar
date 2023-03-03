@@ -14429,6 +14429,15 @@ game:GetService("Players").LocalPlayer.Character.Infected.InfectEvent:FireServer
 wait(.1)
 end
 end)
+Section:NewButton("Aura Katana", " ", function()
+    _G.loop = true;
+while _G.loop do wait()
+_G.loop = true;
+while _G.loop do wait()
+game:GetService("Players").LocalPlayer.Character.Katana.SwingEvent:FireServer()
+wait(.1)
+end
+end)
 Section:NewButton("GUi script Smlie", " ", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/BlackHoleKMT/InwGachar/40aa2728fcc0badd9c528ed268edb1393eb62a16/Smlie",true))();
 end)
