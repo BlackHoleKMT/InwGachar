@@ -14432,8 +14432,6 @@ end)
 Section:NewButton("Aura Katana", " ", function()
     _G.loop = true;
 while _G.loop do wait()
-_G.loop = true;
-while _G.loop do wait()
 game:GetService("Players").LocalPlayer.Character.Katana.SwingEvent:FireServer()
 wait(.1)
 end
