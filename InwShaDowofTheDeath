@@ -19,6 +19,40 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[Player
 end
 end)
 
+Section:NewButton("R15 Invisible", "can interact", function()
+local removeNametags = false -- remove custom billboardgui nametags from hrp, could trigger anticheat
+
+local plr = game:GetService("Players").LocalPlayer
+local character = plr.Character
+local hrp = character.HumanoidRootPart
+local old = hrp.CFrame
+
+if not character:FindFirstChild("LowerTorso") or character.PrimaryPart ~= hrp then
+return print("unsupported")
+end
+
+if removeNametags then
+local tag = hrp:FindFirstChildOfClass("BillboardGui")
+if tag then tag:Destroy() end
+
+hrp.ChildAdded:Connect(function(item)
+if item:IsA("BillboardGui") then
+task.wait()
+item:Destroy()
+end
+end)
+end
+
+local newroot = character.LowerTorso.Root:Clone()
+hrp.Parent = workspace
+character.PrimaryPart = hrp
+character:MoveTo(Vector3.new(old.X,9e9,old.Z))
+hrp.Parent = character
+task.wait(0.5)
+newroot.Parent = character.LowerTorso
+hrp.CFrame = old
+end)
+
 Section:NewToggle("By Pass Tp", "", function()
 	game.Players.localPlayer.Character.Humanoid:setStateEnabled(15,false)
 end)
@@ -29,11 +63,24 @@ local function Bypass()
    };
    game:GetService("ReplicatedStorage").Remotes.Sync:InvokeServer(unpack(args))
 end
-Section:NewButton("Random Tp", " ", function()
-    local randomPlayer = game.Players:GetPlayers()
-[math.random(1,#game.Players:GetPlayers())]
 
+Section:NewToggle("TpRandom on", "", function()
+    _G.loop = true;
+while _G.loop do wait()
+local randomPlayer = game.Players:GetPlayers()
+[math.random(1,#game.Players:GetPlayers())]
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(randomPlayer.Character.Head.Position.X, randomPlayer.Character.Head.Position.Y, randomPlayer.Character.Head.Position.Z))
+wait(.5)
+end
+end)
+Section:NewToggle("TpRandom off", "", function()
+    _G.loop = false;
+while _G.loop do wait()
+local randomPlayer = game.Players:GetPlayers()
+[math.random(1,#game.Players:GetPlayers())]
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(randomPlayer.Character.Head.Position.X, randomPlayer.Character.Head.Position.Y, randomPlayer.Character.Head.Position.Z))
+wait(.1)
+end
 end)
 
 
@@ -14440,6 +14487,43 @@ end
 end)
 Section:NewButton("GUi script Smlie", " ", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/BlackHoleKMT/InwGachar/40aa2728fcc0badd9c528ed268edb1393eb62a16/Smlie",true))();
+end)
+---------------------------------------------------
+local Tab = Window:NewTab("Magic Training")
+local Section = Tab:NewSection("Skills Q,E,R,T,Y,F,G,H,Z,X,C,V,B")
+Section:NewButton("Auto SkillChat", " ", function()
+    local key = {
+    ["E"] = "Avada kedavra",
+    ["R"] = "Defodio",
+    ["T"] = "Deletrius",
+    ["Y"] = "Infernum",
+    ["F"] = "Sectumsempra",
+    ["G"] = "Bombarda",
+    ["H"] = "Crucio",
+    ["Z"] = "Expulso",
+    ["X"] = "Incendio",
+    ["C"] = "Flare",
+    ["V"] = "Confringo",
+    ["B"] = "Depulso",
+    ["Q"] = "appa",
+
+}
+game:GetService("UserInputService").InputBegan:Connect(function(p1,p2)
+    if not p2 then
+    local Nahee = key[p1.KeyCode.Name]  
+    game.Players:Chat(Nahee)
+    game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(Nahee,"All")
+    end
+end)
+
+Section:NewButton("TP Elder Wand", " ", function()
+    for i,v in pairs(game:GetService("Workspace")["Elder Wand"]:GetDescendants()) do
+    if v.Name == "TouchInterest" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame
+wait(.1)
+end
+end
+end)
 end)
 ---------------------------------------------------
 local Tab = Window:NewTab("credit")
