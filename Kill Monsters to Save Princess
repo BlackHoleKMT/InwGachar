@@ -1,4 +1,3 @@
---// Variables \\--
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Workspace = game:GetService("Workspace")
@@ -105,31 +104,4 @@ MainSection:NewDropdown("Auto Skill", "DropdownInf", {"No skill", "Health", "Att
             game:GetService("ReplicatedStorage").Remote.Profile.AddPoint:FireServer(currentOption)
         end
     end
-end)
-
-
-
---// Player Contents \\--
-PlayerSection:NewSlider("Walk Speed", "Slide your walkspeed", 250, 16, function(s)
-    Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
-end)
-
-PlayerSection:NewSlider("Jump Power", "Slide your jump power", 350, 50, function(s)
-    Players.LocalPlayer.Character.Humanoid.JumpPower = s
-    Players.LocalPlayer.Character.Humanoid.UseJumpPower = true
-end)
-
-
---// Visual Contents \\--
-VisualsSection:NewButton("Full Light", "Reset lighting for more fps/to see better", function()
-    FullLight()
-end)
-
---// Misc Contents \\--
-MiscSection:NewButton("Anti-AFK", "When you are afk, you won't be kicked.", function()
-    AntiAFK()
-end)
-
-MiscSection:NewButton("Perspective Watcher", "Switch to other players camera", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/Gravity-0/CCAMERAv4.0/mainB/CCAMv5.0.lua'))()
 end)
