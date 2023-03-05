@@ -14524,10 +14524,14 @@ end
 end)
 end)
 ---------------------------------------------------
-local Tab = Window:NewTab("credit")
+local Tab = Window:NewTab("โปรลับ")
 local Section = Tab:NewSection("Key Pass!!!")
 Section:NewKeybind("KeybindPass", "KeybindInfo", Enum.KeyCode.RightControl, function()
 	Library:ToggleUI()
+end)
+local Section = Tab:NewSection("AdoptMe")
+Section:NewButton("Adopt Me", " ", function()
+    loadstring(game:HttpGet(('https://gitfront.io/r/ReQiuYTPL/wFUydaK74uGx/hub/raw/ReQiuYTPLHub.lua'),true))()
 end)
 ---------------------------------------------------
 -- Section:NewButton("Hack", " ", function()
