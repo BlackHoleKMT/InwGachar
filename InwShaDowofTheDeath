@@ -14604,6 +14604,19 @@ while a do task.wait()
 end
 end)
 ---------------------------------------------------
+local Section = Tab:NewSection("Kill Monsters to Save Princess")
+Section:NewButton("Hmm แก้ละตอนแรกบัคปิง", " ", function()on()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/BlackHoleKMT/InwGachar/main/Kill%20Monsters%20to%20Save%20Princess",true))();
+end)
+Section:NewButton("Aura ultimate", " ", function()
+    _G.loop = true;
+while _G.loop do wait()
+game:GetService("ReplicatedStorage"):WaitForChild("Remote"):WaitForChild("Weapon"):WaitForChild("TakeDamage"):FireServer()
+wait(.0000000001)
+end
+end)
+
+---------------------------------------------------
 local Section = Tab:NewSection("Key Pass!!!")
 Section:NewKeybind("KeybindPass", "KeybindInfo", Enum.KeyCode.RightControl, function()
 	Library:ToggleUI()
