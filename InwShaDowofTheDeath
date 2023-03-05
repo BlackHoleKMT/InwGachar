@@ -1,5 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("All Game")
+local Window = Library.CreateLib("All Game 😂😂😂Update.1.2.3😂😂😂")
 local Tab = Window:NewTab("Player")
 local Section = Tab:NewSection("Select Player!")
 Plr = {}
@@ -14605,11 +14605,50 @@ end
 end)
 ---------------------------------------------------
 local Section = Tab:NewSection("Kill Monsters to Save Princess")
-Section:NewButton("Hmm ถ้าตัวนี้ไม่ได้เอาอีกตัวไป", " ", function()on()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/BlackHoleKMT/InwGachar/main/Kill%20Monsters%20to%20Save%20Princess",true))();
+Section:NewToggle("Auto ATK", "attacks", function(value)
+    getgenv().atk = value
+    while getgenv().atk do
+        task.wait()
+        for j = 1, i do
+            remote.Weapon.TakeDamage:FireServer()
+        end
+    end
 end)
-Section:NewButton("ตัวใหม่", " ", function()on()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/BlackHoleKMT/InwGachar/main/Kill%20Monsters%20to%20Save%20Princess",true))();
+
+Section:NewSlider("auto atk multiplier", "might lag", 10, 1, function(value)
+    i = value 
+end)
+
+Section:NewToggle("Bring Enemies", "brings", function(value)
+    getgenv().bri = value
+    while getgenv().bri do
+        task.wait()
+        pcall(function()
+            local reg = game.Players.LocalPlayer.stats["Battle Region"].Value
+            local chara = game.Players.LocalPlayer.Character.HumanoidRootPart
+            for p, enemy in pairs(game.Workspace.Waves[reg].Enemy:GetChildren()) do
+                enemy.HumanoidRootPart.CFrame = CFrame.new(chara.Position + chara.CFrame.LookVector * 5)
+            end
+        end)
+    end
+end)
+
+
+
+Section:NewDropdown("Pick Stats", "stats to", {"Health", "Attack", "Luck"}, function(sts)
+    getgenv().picker = sts 
+end)
+
+Section:NewToggle("Auto Upgrade", "upgrade", function(value)
+    getgenv().up = value
+    while getgenv().up do
+        task.wait(.4)
+        remote.Profile.AddPoint:FireServer(getgenv().picker)
+    end
+end)
+
+Section:NewButton("Rejoin", "Click to rejoin", function()
+    game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
 end)
 Section:NewButton("Aura ultimate", " ", function()
     _G.loop = true;
