@@ -4,7 +4,7 @@ local i = 1
 
 --gui
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib(""ไงไอหน้ารูหีอยาสกใช้โปรอะดิเรา", "Synapse")
+local Window = Library.CreateLib("ไอหน้ารูหี", "Synapse")
 local Tab = Window:NewTab("Main")
 local Section = Tab:NewSection("Main")
 
