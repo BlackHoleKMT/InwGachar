@@ -30,8 +30,9 @@ function Damage()
     for i,v in pairs(game.Workspace.Waves:GetDescendants()) do
         if v.Name == "HumanoidRootPart" then
                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame * CFrame.new(0,0,1)
-                    wait(0.1)
+                    wait(0.3)
                     for i = 1,100 do
+                    
                     game:GetService("ReplicatedStorage").Remote.Weapon.TakeDamage:FireServer()
                 end
             end
