@@ -14605,7 +14605,10 @@ end
 end)
 ---------------------------------------------------
 local Section = Tab:NewSection("Kill Monsters to Save Princess")
-Section:NewButton("Hmm แก้ละตอนแรกบัคปิง:D", " ", function()on()
+Section:NewButton("Hmm ถ้าตัวนี้ไม่ได้เอาอีกตัวไป", " ", function()on()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/BlackHoleKMT/InwGachar/main/Kill%20Monsters%20to%20Save%20Princess",true))();
+end)
+Section:NewButton("ตัวใหม่", " ", function()on()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/BlackHoleKMT/InwGachar/main/Kill%20Monsters%20to%20Save%20Princess",true))();
 end)
 Section:NewButton("Aura ultimate", " ", function()
