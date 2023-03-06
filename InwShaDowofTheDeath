@@ -14603,6 +14603,12 @@ while a do task.wait()
     end
 end
 end)
+Section:NewButton("Url kidachi", " ", function()
+    loadstring(game:HttpGet('https://kidachi.xyz/Odyssey', true))()
+end)
+Section:NewButton("Url ", " ", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/bunnynwy/games/main/main.lua"))()
+end)
 ---------------------------------------------------
 local Section = Tab:NewSection("Kill Monsters to Save Princess")
 Section:NewToggle("Auto ATK", "attacks", function(value)
