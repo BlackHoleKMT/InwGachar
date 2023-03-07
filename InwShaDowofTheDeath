@@ -14666,7 +14666,54 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remote"):WaitForChild("Weapon
 wait(.0000000001)
 end
 end)
-
+local Section = Tab:NewSection("Slap Battles👏")
+Section:NewButton("Url", " ", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/dizyhvh/slap_battles_gui/main/0.lua"))()
+end)
+Section:NewButton("อันนี้กูทำเอง เปิด", " ", function()
+    function isSpawned(player)
+   if workspace:FindFirstChild(player.Name) and player.Character:FindFirstChild("HumanoidRootPart") then
+       return true
+   else
+       return false
+   end
+end
+_G.loop = true;
+while _G.loop do wait()
+while wait() do
+   for i, v in pairs(game.Players:GetPlayers()) do
+       if isSpawned(v) and v ~= game.Players.LocalPlayer and not v.Character.Head:FindFirstChild("UnoReverseCard") then
+           if (v.Character.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 10 then
+               game:GetService("ReplicatedStorage").b:FireServer(v.Character["Head"])
+               wait(.1)
+                end
+            end
+        end
+    end
+end
+end)
+Section:NewButton("อันนี้กูทำเอง ปิด", " ", function()
+    function isSpawned(player)
+   if workspace:FindFirstChild(player.Name) and player.Character:FindFirstChild("HumanoidRootPart") then
+       return false
+   else
+       return false
+   end
+end
+_G.loop = false;
+while _G.loop do wait()
+while wait() do
+   for i, v in pairs(game.Players:GetPlayers()) do
+       if isSpawned(v) and v ~= game.Players.LocalPlayer and not v.Character.Head:FindFirstChild("UnoReverseCard") then
+           if (v.Character.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 10 then
+               game:GetService("ReplicatedStorage").b:FireServer(v.Character["Head"])
+               wait(.1)
+                end
+            end
+        end
+    end
+end
+end)
 ---------------------------------------------------
 local Section = Tab:NewSection("Key Pass!!!")
 Section:NewKeybind("KeybindPass", "KeybindInfo", Enum.KeyCode.RightControl, function()
