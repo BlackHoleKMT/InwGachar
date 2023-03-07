@@ -14564,6 +14564,9 @@ Section:NewButton("Aura Meelee", " ", function()
                             
                         end end end               
 end)
+Section:NewButton("Spaw Criminals+resetPlayer", " ", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/DigitalityScripts/roblox-scripts/main/Bring%20All'))()
+end)
 Section:NewToggle("TpRandom on", "", function()
     _G.loop = true;
 while _G.loop do wait()
