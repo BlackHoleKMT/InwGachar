@@ -14642,7 +14642,7 @@ Section:NewToggle("Bring Enemies", "brings", function(value)
         end)
     end
 end)
-Section:NewButton("HipHeight", " ", function()
+Section:NewSlider("HipHeight", " ", function()
     Float_Height = "5" -- Your float height | 5 is default
 
 local i=1
