@@ -14624,6 +14624,7 @@ Section:NewToggle("Auto ATK", "attacks", function(value)
     end
 end)
 
+
 Section:NewSlider("auto atk multiplier", "might lag", 10, 1, function(value)
     i = value 
 end)
