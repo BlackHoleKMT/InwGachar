@@ -14660,7 +14660,7 @@ Section:NewButton("HipHeight", " ", function()
 local main2 = library:CreateWindow('Hip Height')
 local Other = main2:Section('Other')
 local part2 = Instance.new("Part")
-local hipHeightSlider = main2:Slider('Hip Height', {min = 3.15, max = 20, default = 0}, function(value)
+local hipHeightSlider = main2:Slider('Hip Height', {min = 3.15, max = 7.95, default = 0}, function(value)
     game:GetService('Players').LocalPlayer.Character.Humanoid.HipHeight = value
 end)
 end)
