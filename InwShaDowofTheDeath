@@ -14624,6 +14624,9 @@ Section:NewButton("Url ", " ", function()
 end)
 ---------------------------------------------------
 local Section = Tab:NewSection("Kill Monsters to Save Princess")
+Section:NewButton("Start", " ", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0.790123701, 4.08244085, -24.804903, 0.997684479, -4.22982899e-11, 0.0680126175, 1.33806036e-10, 1, -1.34089706e-09, -0.0680126175, 1.34689271e-09, 0.997684479)
+end)
 Section:NewToggle("Auto ATK", "attacks", function(value)
     getgenv().atk = value
     while getgenv().atk do
