@@ -13815,7 +13815,7 @@ Section:NewButton("HipHeight2", " ", function()
 local main2 = library:CreateWindow('Hip Height')
 local Other = main2:Section('Other')
 local part2 = Instance.new("Part")
-local hipHeightSlider = main2:Slider('Hip Height', {min = 0, max = 30, default = 0}, function(value)
+local hipHeightSlider = main2:Slider('Hip Height', {min = 0, max = 25, default = 0}, function(value)
     game:GetService('Players').LocalPlayer.Character.Humanoid.HipHeight = value
 end)
 end)
@@ -14624,22 +14624,13 @@ Section:NewButton("Url ", " ", function()
 end)
 ---------------------------------------------------
 local Section = Tab:NewSection("Kill Monsters to Save Princess")
---locals
-local remote = game.ReplicatedStorage.Remote
-local i = 1
 Section:NewToggle("Auto ATK", "attacks", function(value)
     getgenv().atk = value
     while getgenv().atk do
         task.wait()
-        for j = 1, i do
+        local remote = game.ReplicatedStorage.Remote
             remote.Weapon.TakeDamage:FireServer()
         end
-    end
-end)
-
-
-Section:NewSlider("auto atk multiplier", "might lag", 10, 1, function(value)
-    i = value 
 end)
 
 Section:NewToggle("Bring Enemies", "brings", function(value)
@@ -14650,7 +14641,7 @@ Section:NewToggle("Bring Enemies", "brings", function(value)
             local reg = game.Players.LocalPlayer.stats["Battle Region"].Value
             local chara = game.Players.LocalPlayer.Character.HumanoidRootPart
             for p, enemy in pairs(game.Workspace.Waves[reg].Enemy:GetChildren()) do
-                enemy.HumanoidRootPart.CFrame = CFrame.new(chara.Position + chara.CFrame.LookVector * 5)
+                enemy.HumanoidRootPart.CFrame = CFrame.new(chara.Position + chara.CFrame.LookVector * 3)
             end
         end)
     end
@@ -14660,7 +14651,7 @@ Section:NewButton("HipHeight", " ", function()
 local main2 = library:CreateWindow('Hip Height')
 local Other = main2:Section('Other')
 local part2 = Instance.new("Part")
-local hipHeightSlider = main2:Slider('Hip Height', {min = 3.15, max = 7.95, default = 0}, function(value)
+local hipHeightSlider = main2:Slider('Hip Height', {min = 3.15, max = 15, default = 0}, function(value)
     game:GetService('Players').LocalPlayer.Character.Humanoid.HipHeight = value
 end)
 end)
