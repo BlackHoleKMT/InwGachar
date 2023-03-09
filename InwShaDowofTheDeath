@@ -14631,7 +14631,7 @@ Section:NewToggle("Auto ATK", "attacks", function(value)
     getgenv().atk = value
     while getgenv().atk do
         task.wait()
-        local remote = game.ReplicatedStorage.Remote
+        local remote = game:GetService("ReplicatedStorage").Remote
             remote.Weapon.TakeDamage:FireServer()
         end
 end)
@@ -14659,29 +14659,10 @@ local hipHeightSlider = main2:Slider('Hip Height', {min = 3.15, max = 15, defaul
 end)
 end)
 
-
-Section:NewDropdown("Pick Stats", "stats to", {"Health", "Attack", "Luck"}, function(sts)
-    getgenv().picker = sts 
-end)
-
-Section:NewToggle("Auto Upgrade", "upgrade", function(value)
-    getgenv().up = value
-    while getgenv().up do
-        task.wait(.4)
-        remote.Profile.AddPoint:FireServer(getgenv().picker)
-    end
-end)
-
 Section:NewButton("Rejoin", "Click to rejoin", function()
     game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
 end)
-Section:NewButton("Aura ultimate", " ", function()
-    _G.loop = true;
-while _G.loop do wait()
-game:GetService("ReplicatedStorage"):WaitForChild("Remote"):WaitForChild("Weapon"):WaitForChild("TakeDamage"):FireServer()
-wait(.0000000001)
-end
-end)
+
 local Section = Tab:NewSection("Slap Battles👏")
 Section:NewButton("Url", " ", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/dizyhvh/slap_battles_gui/main/0.lua"))()
