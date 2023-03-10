@@ -13819,6 +13819,9 @@ local hipHeightSlider = main2:Slider('Hip Height', {min = 0, max = 25, default =
     game:GetService('Players').LocalPlayer.Character.Humanoid.HipHeight = value
 end)
 end)
+Section:NewButton("DEx", " ", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/BlackHoleKMT/InwGachar/main/Dungeon%20Quest!",true))();
+end)
 
 -------------------------------------------------
 local Tab = Window:NewTab("Murderers vs. Sheriffs")
