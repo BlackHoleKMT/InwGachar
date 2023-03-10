@@ -13672,7 +13672,7 @@ end)
 
 mouse.KeyDown:connect(function(key2)
 if key2 == bind2 then
-_G.HeadSize = 7
+_G.HeadSize = 10
 _G.Disabled = true
 
 
@@ -14501,14 +14501,22 @@ Section:NewButton("Aura Bat", " ", function()
     _G.loop = true;
 while _G.loop do wait()
 game:GetService("Players").LocalPlayer.Character.Bat.SwingEvent:FireServer()
-wait(0.5)
+wait(0.1)
 end
 end)
 Section:NewButton("Aura Smile", " ", function()
     _G.loop = true;
 while _G.loop do wait()
 game:GetService("Players").LocalPlayer.Character.Infected.InfectEvent:FireServer()
+
 wait(.1)
+end
+end)
+Section:NewButton("No Slowdown", " ", function()
+    _G.loop = true;
+while _G.loop do wait()
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 18
+    wait(0.5)
 end
 end)
 Section:NewButton("Aura Katana", " ", function()
