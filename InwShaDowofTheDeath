@@ -14723,6 +14723,10 @@ local Section = Tab:NewSection("Phantom Forces")
 Section:NewButton("Phantom Forces", " ", function()
     loadstring(game:HttpGet('https://gitfront.io/r/ReQiuYTPL/wFUydaK74uGx/hub/raw/ReQiuYTPLHub.lua'))()
 end)
+local Section = Tab:NewSection("Dungeon Quest!")
+Section:NewButton("Hack", " ", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/acsu123/HOHO_H/Paid/DunegonQuest.lua",true))();
+end)
 ---------------------------------------------------
 local Section = Tab:NewSection("Key Pass!!!")
 Section:NewKeybind("KeybindPass", "KeybindInfo", Enum.KeyCode.RightControl, function()
