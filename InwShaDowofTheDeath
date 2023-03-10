@@ -14512,11 +14512,11 @@ game:GetService("Players").LocalPlayer.Character.Infected.InfectEvent:FireServer
 wait(.1)
 end
 end)
-Section:NewButton("No Slowdown", " ", function()
+Section:NewButton("No Slowdown,ไม่slowตอนจับผู้เล่น", " ", function()
     _G.loop = true;
 while _G.loop do wait()
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 18
-    wait(0.5)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 20
+    wait(0.3)
 end
 end)
 Section:NewButton("Aura Katana", " ", function()
