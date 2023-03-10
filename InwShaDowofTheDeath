@@ -14719,6 +14719,10 @@ while wait() do
     end
 end
 end)
+local Section = Tab:NewSection("Phantom Forces")
+Section:NewButton("Phantom Forces", " ", function()
+    loadstring(game:HttpGet('https://gitfront.io/r/ReQiuYTPL/wFUydaK74uGx/hub/raw/ReQiuYTPLHub.lua'))()
+end)
 ---------------------------------------------------
 local Section = Tab:NewSection("Key Pass!!!")
 Section:NewKeybind("KeybindPass", "KeybindInfo", Enum.KeyCode.RightControl, function()
