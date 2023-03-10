@@ -14724,8 +14724,11 @@ Section:NewButton("Phantom Forces", " ", function()
     loadstring(game:HttpGet('https://gitfront.io/r/ReQiuYTPL/wFUydaK74uGx/hub/raw/ReQiuYTPLHub.lua'))()
 end)
 local Section = Tab:NewSection("Dungeon Quest!")
-Section:NewButton("Hack", " ", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/acsu123/HOHO_H/Paid/DunegonQuest.lua",true))();
+Section:NewButton("Fram Desert Temple uplevel", " ", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/F5vSFHZt", true))()
+end)
+Section:NewButton("Fram All Level", " ", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/BlackHoleKMT/InwGachar/main/Dungeon%20Quest!",true))();
 end)
 ---------------------------------------------------
 local Section = Tab:NewSection("Key Pass!!!")
