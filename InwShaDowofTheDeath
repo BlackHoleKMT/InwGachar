@@ -2252,6 +2252,7 @@ game:GetService("UserInputService").InputBegan:Connect(function(p1,p2)
     game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(Nahee,"All")
     end
 end)
+end)
 
 Section:NewButton("TP Elder Wand", " ", function()
     for i,v in pairs(game:GetService("Workspace")["Elder Wand"]:GetDescendants()) do
@@ -2261,6 +2262,17 @@ wait(.1)
 end
 end
 end)
+Section:NewButton("Auto PlayervsPlayer Click Button", " ", function()
+    _G.loop = true;
+while _G.loop do wait()
+    local args = {
+    [1] = {
+        ["distance"] = .1
+    }
+}
+game:GetService("InsertService"):WaitForChild("Events"):WaitForChild("advanceClash"):FireServer(unpack(args))
+wait(.3)
+end
 end)
 ---------------------------------------------------
 local Tab = Window:NewTab("โปรลับ"  )local Section = Tab:NewSection("AdoptMe")
