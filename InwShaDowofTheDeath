@@ -1,3 +1,11 @@
+local NotifyLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vKhonshu/intro/main/ui"))()
+NotifyLib.prompt('I came to take revenge', 'ฉันมาเพื่อแก้แค้น', 3)
+NotifyLib.prompt('I am The Night', 'ฉันคือตอนกลางคืน', 3)
+NotifyLib.prompt('I am Bat Man', 'กูคือแบตแมน', 3)
+NotifyLib.prompt('イタイ', 'Itai', 3)
+NotifyLib.prompt('いい感じ', 'Kimochīi kotoba', 3)
+NotifyLib.prompt('おはよう', 'Fuck you All Game😏', 5)
+local ESP = loadstring(game:HttpGet("https://raw.githubusercontent.com/Ido1212/Mr.Beast.ccV2/main/CLASHROYALE.COM"))()
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("UpDate Westbound,Combat Warriors ")
 local Tab = Window:NewTab("Player")
@@ -1521,6 +1529,28 @@ Section:NewButton("DEx", " ", function()
 end)
 Section:NewButton("EvilMorty Command", " ", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/BlackHoleKMT/InwGachar/main/EvilMorty%20Comman",true))();
+end)
+local Section = Tab:NewSection("Esp")
+Section:NewToggle("Enable ESP", "", function(arg)
+    ESP.Enabled = arg
+end)
+Section:NewToggle("ESP Boxes", "", function(arg)
+    ESP.Boxes = arg
+end)
+Section:NewToggle("ESP Names", "", function(arg)
+    ESP.Names = arg
+end)
+Section:NewToggle("ESP TeamMates", "", function(arg)
+    ESP.TeamMates = arg
+end)
+Section:NewToggle("ESP TeamColor", "", function(arg)
+    ESP.TeamColor = arg
+end)
+Section:NewToggle("ESP FaceCamera", "", function(arg)
+    ESP.FaceCamera = arg
+end)
+Section:NewToggle("ESP Tracers", "", function(arg)
+    ESP.Tracers = arg
 end)
 
 -------------------------------------------------
