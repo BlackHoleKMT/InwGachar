@@ -1744,8 +1744,8 @@ end)
 ---------------------------------------------------
 local Tab = Window:NewTab("Murder Mystery 2")
 local Section = Tab:NewSection("Funtion")
-Section:NewButton("Murder Mystery 2 Comingson", "", function()
-    
+Section:NewButton("Script", "", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Ethanoj1/EclipseMM2/master/Script", true))()
 end)
 ---------------------------------------------------
 local Tab = Window:NewTab("FE Neko+Command")
