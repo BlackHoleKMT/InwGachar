@@ -9,6 +9,13 @@ end
 local drop = Section:NewDropdown("Select Player!", "Click To Select", Plr, function(t)
    PlayerTP = t
 end)
+Section:NewButton("Refresh Dropdown","Refresh Dropdown", function()
+  Plr = {}
+for i,v in pairs(game:GetService("Players"):GetChildren()) do
+    table.insert(Plr,v.Name) 
+end
+  drop:Refresh(Plr)
+end)
 Section:NewButton("Click To TP", "", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[PlayerTP].Character.HumanoidRootPart.CFrame
 end)
