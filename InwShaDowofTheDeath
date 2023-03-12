@@ -1980,6 +1980,10 @@ local Section = Tab:NewSection("use Q Run or off")
 Section:NewButton("Bypass chat", " ", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/synnyyy/synergy/additional/betterbypasser",true))()
 end)
+Section:NewButton("Bypass chat New Use Q On / off", " ", function()
+    _G.Keybind = 'Q'
+loadstring(game:HttpGet("https://raw.githubusercontent.com/synnyyy/synergy/additional/betterbypasser",true))()
+end)
 ---------------------------------------------------
 local Tab = Window:NewTab("Pizza Party")
 local Section = Tab:NewSection("script")
