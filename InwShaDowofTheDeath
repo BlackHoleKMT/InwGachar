@@ -1,5 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("EvilMorty_Ultrainstict Update 🤢🤢🤢")
+local Window = Library.CreateLib("UpDate Westbound กูไม่ได้บอกก่อน")
 local Tab = Window:NewTab("Player")
 local Section = Tab:NewSection("Select Player!")
 Plr = {}
@@ -2448,6 +2448,10 @@ end)
 local Section = Tab:NewSection("Treasure Hunt Simulator")
 Section:NewButton("Hack", " ", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/BlackHoleKMT/InwGachar/main/Treasure%20Hunt%20Simulator",true))();
+end)
+local Section = Tab:NewSection("Westbound")
+Section:NewButton("Silent hack", " ", function()
+    loadstring(game.HttpGet(game, "https://raw.githubusercontent.com/Exunys/westbound.pro-Utilites/main/Main.lua"))()
 end)
 ---------------------------------------------------
 local Section = Tab:NewSection("Key Pass!!!")
