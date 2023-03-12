@@ -2445,6 +2445,10 @@ end)
 Section:NewButton("Fram All Level", " ", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/BlackHoleKMT/InwGachar/main/Dungeon%20Quest!",true))();
 end)
+local Section = Tab:NewSection("Treasure Hunt Simulator")
+Section:NewButton("Hack", " ", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/BlackHoleKMT/InwGachar/main/Treasure%20Hunt%20Simulator",true))();
+end)
 ---------------------------------------------------
 local Section = Tab:NewSection("Key Pass!!!")
 Section:NewKeybind("KeybindPass", "KeybindInfo", Enum.KeyCode.RightControl, function()
