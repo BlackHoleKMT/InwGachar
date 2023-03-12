@@ -1,4 +1,4 @@
-players = false
+players = true
 computers = true
 pods = false
 exitdoors = true
