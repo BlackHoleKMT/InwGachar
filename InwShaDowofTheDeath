@@ -1530,6 +1530,9 @@ end)
 Section:NewButton("EvilMorty Command", " ", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/BlackHoleKMT/InwGachar/main/EvilMorty%20Comman",true))();
 end)
+Section:NewButton("Gui Game Command", " ", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/LaeraLuzy/SyctheHubV1/main/script.lua",true))();
+end)
 local Section = Tab:NewSection("Esp")
 Section:NewToggle("Enable ESP", "", function(arg)
     ESP.Enabled = arg
