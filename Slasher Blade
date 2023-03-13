@@ -159,7 +159,7 @@ end)
 local engine = loadstring(game:HttpGet("https://raw.githubusercontent.com/Singularity5490/rbimgui-2/main/rbimgui-2.lua"))()
 
 local Window1 = engine.new({
-	text = "⏳Slasher Blade⚔️fuckyouTrash" ,
+	text = "By ⚔️God_BlackHole⚔️" ,
 	position = UDim2.new(.01, 0, .65, 0),
 	size = Vector2.new(300, 200)
 })
