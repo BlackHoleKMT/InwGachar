@@ -7,7 +7,7 @@ NotifyLib.prompt('いい感じ', 'Kimochīi kotoba', 3)
 NotifyLib.prompt('おはよう', 'Fuck you All Game😏', 5)
 local ESP = loadstring(game:HttpGet("https://raw.githubusercontent.com/Ido1212/Mr.Beast.ccV2/main/CLASHROYALE.COM"))()
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("UpDate Westbound,Combat Warriors ")
+local Window = Library.CreateLib("ผู้กล้าสายเย็*Pussy ")
 local Tab = Window:NewTab("Player")
 local Section = Tab:NewSection("Select Player!")
 Plr = {}
