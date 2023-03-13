@@ -65,7 +65,7 @@ function ResetUpgrades()
 		game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId, game.JobId, LP)
 	end
 end
-function StartDunguen()
+function StartDungeon()
 	game:GetService("ReplicatedStorage"):WaitForChild("Remote"):WaitForChild("Event"):WaitForChild("Game"):WaitForChild("[C-S]PlayerTryJoin"):FireServer()
 end
 function TpMonter()
