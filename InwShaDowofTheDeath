@@ -2494,7 +2494,27 @@ end)
 Section:NewButton("MAXHUB", " ", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/ufouzzed/CWShitterHub/main/CWScript.lua"))() 
 end)
-
+local Section = Tab:NewSection("Flee the Facility")
+Section:NewButton("ESP All Left ALT ON/Off", " ", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/OneProtocol/Project/main/Loader", true))()
+end)
+Section:NewButton("Auto Computer", " ", function()
+    _G.loop = true;
+while _G.loop do wait()
+local args = {
+    [1] = "Input",
+    [2] = "Action",
+    [3] = true
+}
+game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+local args = {
+    [1] = "SetPlayerMinigameResult",
+    [2] = true
+}
+game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
+wait(.1)
+end
+end)
 ---------------------------------------------------
 local Section = Tab:NewSection("Key Pass!!!")
 Section:NewKeybind("KeybindPass", "KeybindInfo", Enum.KeyCode.RightControl, function()
