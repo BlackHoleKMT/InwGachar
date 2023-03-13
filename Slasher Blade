@@ -71,23 +71,37 @@ end
 function TpMonter()
 _G.loop = true;
 while _G.loop do wait()
-for i,v in pairs(game:GetService("Workspace").Room:GetDescendants()) do
+for i,v in pairs(game:GetService("Workspace").Room.Room1.Mob:GetDescendants()) do
     if v.Name == "Mesh" then
+    
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame
+end
+end
+for i,v in pairs(game:GetService("Workspace").Room.Room1.Mob:GetDescendants()) do
+    if v.Name == "Attachment" then
+    
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame
+end
+end
 wait(.1)
-end
-end
 end
 end
 function StopMonter()
 _G.loop = false;
 while _G.loop do wait()
-for i,v in pairs(game:GetService("Workspace").Room:GetDescendants()) do
+for i,v in pairs(game:GetService("Workspace").Room.Room1.Mob:GetDescendants()) do
     if v.Name == "Mesh" then
+    
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame
+end
+end
+for i,v in pairs(game:GetService("Workspace").Room.Room1.Mob:GetDescendants()) do
+    if v.Name == "Attachment" then
+    
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame
+end
+end
 wait(.1)
-end
-end
 end
 end
 
