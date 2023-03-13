@@ -2518,6 +2518,10 @@ game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpa
 wait(.1)
 end
 end)
+local Section = Tab:NewSection("Key Pass!!!")
+Section:NewButton("Slasher Bladeทำเองโว้ย", " ", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/BlackHoleKMT/InwGachar/main/Slasher%20Blade",true))();
+end)
 ---------------------------------------------------
 local Section = Tab:NewSection("Key Pass!!!")
 Section:NewKeybind("KeybindPass", "KeybindInfo", Enum.KeyCode.RightControl, function()
